@@ -76,7 +76,9 @@ nav svg {
 
 .front-page {
   min-height: 100vh;
-  color: white;
+  color: rgb(255, 255, 255);
+  opacity: 2;
+  
 }
 .selling-point {
   margin-top: 25vh;
