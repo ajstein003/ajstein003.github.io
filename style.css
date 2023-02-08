@@ -2,7 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  
 }
+
+::-webkit-scrollbar {
+  background: rgb(255, 255, 255);
+  width: 0.5rem;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+  background: rgb(255, 0, 0);
+  }
 
 html {
   font-family: 'Poppins', sans-serif;
@@ -194,5 +206,45 @@ nav svg {
   }
   .about h2 {
     text-align: start;
+  }
+}
+
+footer{
+  background-color: rgb(173, 2, 2);
+  padding: 0.8rem;
+
+}
+
+footer ul{
+  display: flex;
+  padding: 0.8rem;
+}
+
+.contacts{
+  width: 5rem;
+  list-style-type: none;
+  padding: 0.8rem;
+  color: whitesmoke;
+}
+
+.contacts-copy{
+  width: 5rem;
+  list-style-type: none;
+  padding: 0.8rem;
+  color: whitesmoke;
+  margin-left: 50vw;
+}
+
+.contacts a{
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.4rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .contacts-copy{
+    margin-left: 40vw;
   }
 }
