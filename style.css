@@ -3,18 +3,26 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  
 }
 
 ::-webkit-scrollbar {
   background: rgb(255, 255, 255);
   width: 0.5rem;
-  }
+}
 
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-  background: rgb(255, 0, 0);
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FD6585;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #FFD3A5, #fd6586, #a5d3ff );
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
 
 html {
   font-family: 'Poppins', sans-serif;
@@ -30,6 +38,7 @@ html {
   font-family: "argonite";
   src: url("./assets/stone\ orgonite.woff");
 }
+
 section {
   padding: 5%;
 }
@@ -55,22 +64,32 @@ nav svg {
 }
 
 .links {
-  position: absolute;
-  background: white;
-  width: 100%;
-  height: 100vh;
-  left: 0;
-  top: 0;
+  position: fixed;
+  top: 35%;
+  right: -100%; /* Adjust the value as per your preference */
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.216);
+  padding: 10px;
+  border-radius: 20px;
+  animation: slideInRight 0.5s forwards;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  transform: translateX(100%);
+  z-index: 999;
 }
+
 .links a {
-  color: var(--secondary-color);
+  display: block;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
   font-size: 2rem;
+  margin-bottom: 10px; /* Adjust the value as per your preference */
 }
+
+.links a:last-child {
+  margin-bottom: 3rem;
+}
+
 
 .logo {
   display: flex;
@@ -86,27 +105,33 @@ nav svg {
   width: 1.5rem;
 }
 
-.front-page {
-  min-height: 100vh;
-  color: rgb(255, 255, 255);
-  opacity: 2;
-  
-}
+
+
 .selling-point {
   margin-top: 25vh;
   font-family: "argonite", sans-serif;
-  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.49);
+  text-shadow: 0px 4px 12px rgba(245, 245, 245, 0.328);
   text-align: center;
   font-weight: bolder;
   
-
 }
+
+.selling-point h2 {
+  background: linear-gradient(45deg, #0c0c0c, #000000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .selling-point h3 {
-  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.49);
+  text-shadow: 0px 4px 12px rgb(255, 255, 255);
   font-family: 'Poppins', sans-serif;
   font-weight: lighter;
   padding-top: 1.5rem;
+  padding-bottom: 30rem;
 }
+
+
 .ctas {
   margin-top: 2rem;
 }
@@ -143,8 +168,10 @@ nav svg {
 
 .classes {
   color: var(--secondary-color);
+  background-color: whitesmoke;
   text-align: center;
   font-family: "argonite", sans-serif;
+  margin-bottom: 20px;
 }
 .videos video {
   width: 100%;
@@ -170,7 +197,10 @@ nav svg {
 }
 
 .about {
+  padding-top: 5rem;
+  background-color: rgba(255, 255, 255, 0.216);
   color: var(--secondary-color);
+  margin-top: 6rem;
 }
 .about h2 {
   font-family: "argonite", sans-serif;
@@ -210,7 +240,7 @@ nav svg {
 }
 
 footer{
-  background-color: rgb(173, 2, 2);
+  background-color: transparent;
   padding: 0.8rem;
 
 }
@@ -231,17 +261,37 @@ footer ul{
   width: 6rem;
   list-style-type: none;
   padding: 0.8rem;
-  color: whitesmoke;
+  color: rgb(5, 4, 4);
   margin-left: 50vw;
 }
 
 .contacts a{
   text-decoration: none;
-  color: whitesmoke;
+  color: rgb(0, 0, 0);
   font-size: 1.4rem;
 }
 
 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    right: -200px;
+  }
+  to {
+    right: 10px; /* Adjust the value to control the final position */
+  }
+}
 
 @media screen and (max-width: 768px) {
   .contacts-copy{
