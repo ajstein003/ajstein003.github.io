@@ -18,9 +18,9 @@
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
-  background: linear-gradient(135deg, #FFD3A5, #fd6586, #a5d3ff );
+  background: linear-gradient(135deg,#000000, #323132, #090947);
   background-size: 400% 400%;
-  animation: gradientAnimation 5s ease infinite;
+  animation: gradientAnimation 8s ease infinite;
 }
 
 
@@ -68,7 +68,7 @@ nav svg {
   top: 35%;
   right: -100%; /* Adjust the value as per your preference */
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.216);
+  background-color: rgba(0, 0, 0, 0.463);
   padding: 10px;
   border-radius: 20px;
   animation: slideInRight 0.5s forwards;
@@ -99,6 +99,7 @@ nav svg {
   margin-left: 0.5rem;
   font-size: 1rem;
   font-family: "argonite", sans-serif;
+  color: whitesmoke;
 }
 
 .logo img {
@@ -117,14 +118,15 @@ nav svg {
 }
 
 .selling-point h2 {
-  background: linear-gradient(45deg, #0c0c0c, #000000);
+  background: linear-gradient(45deg, #ffffff, #ffffff);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .selling-point h3 {
-  text-shadow: 0px 4px 12px rgb(255, 255, 255);
+  text-shadow: 0px 4px 12px rgb(251, 248, 248);
+  color: whitesmoke;
   font-family: 'Poppins', sans-serif;
   font-weight: lighter;
   padding-top: 1.5rem;
@@ -230,6 +232,7 @@ nav svg {
     display: flex;
     gap: 5rem;
     justify-content: space-between;
+    color: whitesmoke;
   }
   .about img {
     width: 50%;
@@ -261,13 +264,13 @@ footer ul{
   width: 6rem;
   list-style-type: none;
   padding: 0.8rem;
-  color: rgb(5, 4, 4);
+  color: rgb(255, 255, 255);
   margin-left: 50vw;
 }
 
 .contacts a{
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 1.4rem;
 }
 
